@@ -25,7 +25,7 @@ html{
 }
 
 .nav div.logo a:hover {
-    color: #3a4cf0;
+    color: #54c0eb;
 }
 
 .nav div.main_list {
@@ -57,27 +57,6 @@ html{
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
-}
-
-#animation 
-.navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
-}
-
-.navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
+    color: #54c0eb;
 }
 

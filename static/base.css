@@ -71,11 +71,16 @@ p{
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 1px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background-color: rgb(66, 45, 45);
 }
 
 .header{
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,64,64,0.17440479609812676) 100%);
+background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(245,64,64,0.073564459963673) 100%);
     margin-bottom: 100px;
 }
 .header .row{

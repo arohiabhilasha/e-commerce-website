@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Mulish', sans-serif;
+font-family: 'Work Sans', sans-serif;
+}
+
 .navbar{
     display: flex;
     align-items: center;
@@ -70,5 +75,10 @@ p{
 
 .header{
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,64,64,1) 100%);        
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,64,64,0.17440479609812676) 100%);
+    margin-bottom: 100px;
+}
+.header .row{
+    margin-top: 100px;
+    
 }

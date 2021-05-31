@@ -37,3 +37,38 @@ p{
     padding-left: 25px;
     padding-right: 25 px;
 }
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    background: #f54040;
+    display: inline-block;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 1px;
+}
+
+.header{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,64,64,1) 100%);        
+}

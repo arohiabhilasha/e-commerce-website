@@ -63,6 +63,9 @@ p{
     line-height: 60px;
     margin: 25px 0;
 }
+.main_img{
+    filter: drop-shadow(4px 5px 6px #222);
+}
 .btn{
     background: #f54040;
     display: inline-block;

@@ -40,6 +40,7 @@ p{
     margin: auto;
     padding-left: 25px;
     padding-right: 25 px;
+    position: fixed;
 }
 
 .row{

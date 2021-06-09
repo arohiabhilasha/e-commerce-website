@@ -20,14 +20,22 @@
 <body>
     <div class="header">
         <div class="container">
-            <div class="navbar">
+            <div class="navbar navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="logo">
                     <img src="logo (1).png" width ="125px">
                 </div>
-                <nav>
-                    <ul class="navlinks">
+                <nav class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navlinks navbar-nav">
                         <li><a href="">HOME</a></li>
-                        <li><a href="">PRODUCTS</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PRODUCTS
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                              </ul>
+                        </li>
                         <li><a href="">CONTACT</a></li>
                         <li><a href="">ACCOUNT</a></li>
                         <li><a href="">CART</a></li>
@@ -132,38 +140,6 @@
         </div>
       </footer>
 
-    <!--Footer
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download our app</h3>
-                    <p>Download app for android and ios mobile phones</p>
-                </div>
-                <div class="footer-col-2">
-                    <img src="logo (1).png">
-                    <p>Our purpose is to sustainably make the pleasure and benefits of electronics accessable to the many</p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Blog Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col4">
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>twitter</li>
-                        <li>Instagram</li>
-                        <li>Linkedin</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>-->
+    
 </body>
 </html>

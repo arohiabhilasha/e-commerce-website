@@ -8,7 +8,7 @@ body{
     font-family: 'EB Garamond', serif;
 }
 
-.navbar{
+.navbar-1{
     display: flex;
     align-items: center;
     padding: 20px;
@@ -28,7 +28,7 @@ nav ul li{
     margin-right: 20px;
 }
 
-.container{
+.container-1{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
@@ -53,4 +53,17 @@ button{
     border-color: white !important;
     color: black !important;
 }
-*/
+
+
+.pro-grid{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto auto auto auto;
+    border-color: black;
+}
+
+.pro-grid-1 .pro-grid-2{
+    background-color: #80cbc4;
+    display: grid;
+    border: 1px solid #fff;
+} */

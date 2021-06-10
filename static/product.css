@@ -27,12 +27,17 @@ nav ul li{
     display: inline-block;
     margin-right: 20px;
 }
+
 .container{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
-    padding-right: 25 px;
-    
+    padding-right: 25px;   
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .row{
@@ -41,4 +46,9 @@ nav ul li{
     flex-wrap: wrap;
     justify-content: space-around;
     
+}
+button{
+    background-color: white !important;
+    border-color: white ;
+    color: black !important;
 }

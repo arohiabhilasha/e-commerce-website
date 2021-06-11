@@ -66,23 +66,33 @@ button{
     background-color: #80cbc4;
     display: grid;
     border: 1px solid #fff;
-} */
+} 
+*/
 
 .container-2 {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: 30% auto;
     background-color: white;
     padding: 10px;
     border-radius: 1px;
-    
+    grid-gap: 1em;
     margin: 2rem;
   }
-  .item {
+  .sort-g, .pro-g {
     background-color: white;
     border: 1px solid black;
     padding: 20px;
     margin: 1px;
     font-size: 30px;
     text-align: center;
+  }
+
+  .sort-g{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .pro-g{
+    grid-column: 2;
+    grid-row: 1/3;
   }

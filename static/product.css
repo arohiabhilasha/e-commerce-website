@@ -67,3 +67,22 @@ button{
     display: grid;
     border: 1px solid #fff;
 } */
+
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto auto auto auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 1px;
+    
+    margin: 2rem;
+  }
+  .item {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 1px;
+    font-size: 30px;
+    text-align: center;
+  }

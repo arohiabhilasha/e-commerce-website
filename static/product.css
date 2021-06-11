@@ -8,6 +8,7 @@ body{
     font-family: 'EB Garamond', serif;
 }
 
+/*-----------------Header----------------*/
 .navbar-1{
     display: flex;
     align-items: center;
@@ -38,36 +39,10 @@ nav ul li{
 a{
     text-decoration: none;
     color: black;
-} /*
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
 }
 
 
-button{
-    background-color: white !important;
-    border-color: white !important;
-    color: black !important;
-}
-
-
-.pro-grid{
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: auto auto auto auto;
-    border-color: black;
-}
-
-.pro-grid-1 .pro-grid-2{
-    background-color: #80cbc4;
-    display: grid;
-    border: 1px solid #fff;
-} 
-*/
+/*-----------------------Grid-content------------------------*/
 
 .grid-1 {
     display: grid;
@@ -121,3 +96,23 @@ button{
   .product img{
       width: 100%;
   }
+
+  .blog-posts {
+    margin-top: 100px; }
+    .blog-posts .post {
+      border: 1px solid #e1e1e1;
+      padding: 20px 20px 0;
+      background: white;
+      position: relative; }
+    .blog-posts .post-1 {
+      transform: translate(100px, 20px); }
+    .blog-posts .post-2 {
+      z-index: 2; }
+    .blog-posts .post-3 {
+      transform: translate(-100px, 20px); }
+
+      .column,
+      .columns {
+        width: 100%;
+        float: left;
+        box-sizing: border-box; }

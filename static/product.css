@@ -13,6 +13,10 @@ body{
     display: flex;
     align-items: center;
     padding: 20px;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
 }
 
 nav{
@@ -34,6 +38,10 @@ nav ul li{
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;   
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;   
 }
 
 a{
@@ -84,7 +92,8 @@ a{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto auto auto auto;
-      box-shadow: 5px black;
+      border: 2px black;
+      
   }
   .product{
     flex-basis: 30%;
@@ -92,7 +101,7 @@ a{
     min-width: 200px;
     margin-bottom: 50px;
     flex-direction: row;
-    
+    box-shadow: 0 0px 10px 2px #ddd;
     
   }
   .product p{

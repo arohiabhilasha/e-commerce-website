@@ -99,7 +99,7 @@ a{
     flex-basis: 30%;
     padding: 10px;
     min-width: 200px;
-    margin-bottom: 50px;
+    margin: 10px;
     flex-direction: row;
     box-shadow: 0 0px 10px 2px #ddd;
     

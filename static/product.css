@@ -113,5 +113,15 @@ a{
   .product img{
       width: 100%;
   }
-
+h5{
+  color: whitesmoke !important;
+  font-weight: lighter;
+}
+  .list-unstyled a{
+    color: rgb(218, 214, 214);
+    font-weight: 500;
+  }
+  .footer-copyright{
+    color: grey;
+  }
  

@@ -8,6 +8,13 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="horizontal-nav-mobile.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
         <title>
             Products - Unipower
         </title>
@@ -20,6 +27,7 @@
             <div class="logo">
               <img src="logo (1).png" width ="125px">
             </div> 
+            <!--
             <nav>
               <ul id="menu-items" >
                   <li><a href="">HOME</a></li>
@@ -42,6 +50,22 @@
             <img src="outline_menu_black_24dp.png" class="menu-icon" onclick="menutoggle()">
           </div>
         </div>
+      </div> -->
+      <div class="sectional-nav clearBoth">
+        <div class="container">
+          <ul class="hidden-sm-down p-0 d-flex align-items-center justify-content-between">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#"><img src="outline_shopping_cart_black_24dp.png" width="30px" height="30px"></a></li>
+          </ul> 
+        </div>
+        <select name="sectional_nav" id="sectional_nav" class="form-control hidden-md-up" onchange="window.location.href=this.value">
+          <option value="0"><img src="outline_menu_black_24dp.png" class="menu-icon" onclick="menutoggle()"></option>
+          <option value="#">Stabilizers</option>
+          <option value="#">Servo</option>
+        </select>
       </div>
       
                 

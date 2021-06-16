@@ -131,8 +131,11 @@ nav select {
     min-width: 200px;
     margin: 15px;
     flex-direction: row;
-    box-shadow: 0 0px 8px 1px #ddd;
+    box-shadow: 0 0px 7px 0px #ddd;
     
+  }
+  hr.solid {
+    border-top: 1px solid #bbb;
   }
  
   .product p{
@@ -154,11 +157,14 @@ h5{
   }
  
 .pro_name{
-  font-size: 10px;
+  font-size: 15px;
 }
 
 /*-----------Button----------------*/
 
+.product>p{
+  justify-content: right;
+}
 .myButton {
 	background:linear-gradient(to bottom, #f54040 5%, #d62828 100%);
 	background-color:#f54040;
@@ -168,10 +174,11 @@ h5{
 	cursor:pointer;
 	color:#fafafa;
 	font-family:Arial;
-	font-size:10px;
-	padding:5px 10px;
+	font-size:11px;
+	padding:8px 16px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
+  
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #d62828 5%, #f54040 100%);

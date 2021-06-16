@@ -39,6 +39,10 @@ button:active{
   border-color: white !important;
   border: none !important;
 }
+.dropdown-menu{
+  border: none !important;
+  
+}
 
 nav ul{
     display:inline-block;

@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
     font-family: 'EB Garamond', serif;
+    
 }
 
 /*-----------------Header----------------*/
@@ -17,6 +19,7 @@ body{
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
+    background-color: white;
 }
 
 nav{
@@ -82,8 +85,11 @@ nav select {
     padding: 10px;
     border-radius: 1px;
     grid-gap: 1em;
-    margin: 2rem;
+    margin: 5rem 2rem 2rem 2rem;
+    
   }
+
+
   .sort-g, .pro-g, .footer-g {
     background-color: white;
         padding: 20px;
@@ -110,6 +116,8 @@ nav select {
     background-color: rgb(54, 54, 54);
     font-size: small;
   }
+
+  /*--------------------Product section---------------*/
   .grid-2{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -126,9 +134,7 @@ nav select {
     box-shadow: 0 0px 8px 1px #ddd;
     
   }
-  .product:hover{
-    transform: translateY(0) scale(1.1);
-  }
+ 
   .product p{
     font-size: 14px;
   }
@@ -149,4 +155,31 @@ h5{
  
 .pro_name{
   font-size: 10px;
+}
+
+/*-----------Button----------------*/
+
+.myButton {
+	background:linear-gradient(to bottom, #f54040 5%, #d62828 100%);
+	background-color:#f54040;
+	border-radius:28px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#fafafa;
+	font-family:Arial;
+	font-size:10px;
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #d62828 5%, #f54040 100%);
+	background-color:#d62828;
+  color: white;
+  text-decoration: none ;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }

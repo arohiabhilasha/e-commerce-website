@@ -9,16 +9,15 @@ body{
 }
 
 /*-----------------Header----------------*/
-/*
 .navbar-1{
     display: flex;
     align-items: center;
     padding: 20px;
     overflow: hidden;
-    position: fixed; 
-    top: 0; 
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
     width: 100%;
-} 
+}
 
 nav{
     flex: 1;
@@ -30,27 +29,10 @@ nav a:hover{
   color: #f54040;
   text-decoration: none;
 }
-@media (max-width: 960px) {
-  nav {
-    ul {
-      display: none;
-    }
-    
-  }
-}
 
-button{
-  background-color: white !important;
-  color: black !important;
-  border-color: white !important;
-}
-button:active{
-  border-color: white !important;
-  border: none !important;
-}
+
 .dropdown-menu{
   border: none !important;
-  
 }
 
 nav ul{
@@ -71,8 +53,8 @@ nav ul li{
     padding-left: 25px;
     padding-right: 25px;   
     overflow: hidden;
-    position: fixed; 
-    top: 0; 
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
     width: 100%;   
 }
 
@@ -80,70 +62,13 @@ a{
     text-decoration: none;
     color: black;
 }
-*/
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-overflow: '';
-  color: #fff !important;
-}
-select option {
-color: #000 !important;
-}
-select::-ms-expand {
+nav select {
   display: none;
 }
-
-
-.sectional-nav {
-background-color: #202a35;
-}
-
-.sectional-nav ul li {
-display: inline-block;
-list-style-type: none;
-text-transform: uppercase;
-margin-right: 12px;
-font-weight: 500;
-font-size: 18px;
-line-height: 1;
-padding: 15px 10px;
-}
-.sectional-nav ul li:first-of-type {
-padding: 30px 10px;
-}
-.sectional-nav ul li:hover {
-background-color: #0479c3;
-cursor: pointer;
-color: #fff;
-}
-.sectional-nav ul li a {
-color: #fff;
-}
-.sectional-nav ul li:hover a {
-color: #eeeeee;
-}
-
-
-@media screen and (max-width: 992px) {
-.sectional-nav ul li {
-  font-size: 16px;  
-}
-.sectional-nav ul li {
-  padding: 20px 5px;
-}
-}
-
-@media screen and (max-width: 767px) {
-.sectional-nav #sectional_nav {
-  height: 60px;
-  width: 100%;
-  font-size: 18px;
-  background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
-  background-position: 98% 50%;
-  background-repeat: no-repeat;
-}
+@media (max-width: 960px) {
+  nav ul     { display: none; }
+  nav select { display: inline-block; }
 }
 
 

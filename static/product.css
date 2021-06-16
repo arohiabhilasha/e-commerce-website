@@ -22,15 +22,34 @@ body{
 nav{
     flex: 1;
     text-align: right;
+    color: black !important;
+}
+
+nav a:hover{
+  color: #f54040;
+  text-decoration: none;
+}
+
+button{
+  background-color: white !important;
+  color: black !important;
+  border-color: white !important;
+}
+button:active{
+  border-color: white !important;
+  border: none !important;
 }
 
 nav ul{
     display:inline-block;
     list-style-type: none;
+    color: black;
 }
+
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+    color: black;
 }
 
 .container-1{

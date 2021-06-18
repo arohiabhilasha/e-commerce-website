@@ -5,6 +5,7 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0" >    
         <link rel="stylesheet" href="static/product.css">
         <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/main.scss"/>  
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -81,8 +82,9 @@
         </div>
         <div>
           <p>Price</p>
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <div class="range-slider">
+            <input class="range-slider__range" type="range" value="250" min="0" max="500" step="50">
+            <span class="range-slider__value">250</span>
           </div>
         </div>
       </div>

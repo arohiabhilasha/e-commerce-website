@@ -63,4 +63,5 @@ const settings={
     const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%)`;
     slider.style.background = bg;
   }
+ 
   

@@ -24,46 +24,42 @@
             <div class="logo">
               <img src="logo (1).png" width ="125px">
             </div> 
-            <nav> 
 
-      <ul> 
-        <li><a href="/" class="active">Home</a></li> 
-        <li>
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Products
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Servo</a></li>
-              <li><a href="#">Stabilizers</a>
-            </ul>
-          </div>
-        </li>
-        <li><a href="/blogs/five-simple-steps-blog">Contact</a></li> 
-        <li><a href="/pages/about-us">Account</a></li> 
-        
-      </ul> 
-      
-      <select> 
-        <option value="" selected="selected"><img src="outline_menu_black_24dp.png" class="menu-icon" onclick="menutoggle()"></option> 
-        
-        <option value="/">Home</option> 
-        <option value="/collections/all">
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Products
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Servo</a></li>
-              <li><a href="#">Stabilizers</a>
-            </ul>
-          </div>
-        </option> 
-        <option value="/blogs/five-simple-steps-blog">Contact</option> 
-        <option value="/pages/about-us">Account</option>  
-      </select> 
-    
-    </nav>
+            <nav> 
+              <ul> 
+                <li><a href="/" class="active">Home</a></li> 
+                <li>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Products
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Servo</a></li>
+                      <li><a href="#">Stabilizers</a>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="/blogs/five-simple-steps-blog">Contact</a></li> 
+                <li><a href="/pages/about-us">Account</a></li> 
+              </ul> 
+
+              <select> 
+                <option value="" selected="selected"><img src="outline_menu_black_24dp.png" class="menu-icon" onclick="menutoggle()"></option> 
+                <option value="/">Home</option> 
+                <option value="/collections/all">
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Products
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Servo</a></li>
+                      <li><a href="#">Stabilizers</a>
+                    </ul>
+                  </div>
+                </option> 
+                <option value="/blogs/five-simple-steps-blog">Contact</option> 
+                <option value="/pages/about-us">Account</option>  
+              </select> 
+            </nav>
             <img src="outline_shopping_cart_black_24dp.png" width="30px" height="30px">
-            
           </div>
         </div>
       </div>
@@ -75,8 +71,20 @@
     
     <div class="grid-1">
       <div class="sort-g">
-        <h1>filter</h1>
-
+        <h1>Sort by</h1>
+        <div>
+          <p>VA</p>
+          <select>
+            <option>7-10</option>
+            <option>11-20</option>
+          </select>
+        </div>
+        <div>
+          <p>Price</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+        </div>
       </div>
 
       <div class="pro-g">

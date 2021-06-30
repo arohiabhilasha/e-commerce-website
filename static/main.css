@@ -25,3 +25,7 @@
 .main_img{
   filter: drop-shadow(4px 5px 6px #222);
 }
+
+footer{
+  position: inherit;
+}

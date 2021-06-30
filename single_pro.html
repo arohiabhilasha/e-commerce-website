@@ -86,10 +86,12 @@
             <h4>$100</h4>
             <div>
                 <p>{{description}}</p>
-                <br>
+              
             </div>
             <input type="number" value="1">
             <a href="" class="myButton">Add to cart</a>
+            <h3>Product Details</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
         </div>
       </div>
@@ -219,6 +221,9 @@
 
   <!---------------Style----------------->
   <style>
+  body{
+    min-height: 100vh;
+  }
   .myButton {
   background:linear-gradient(to bottom, #f54040 5%, #d62828 100%);
   background-color:#f54040 !important; 
@@ -248,8 +253,30 @@
   .col-sm p{
     color: black;
   }
-  .row{
-    margin: 5rem;
+  .col-sm img{
+    background-color: rgb(224, 223, 220);
+  }
+  .col-sim h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold !important;
+}
+.col-sim select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+  .pro-des{
+    margin: 10rem;
+}
+footer{
+  bottom: 0px;
+  width:100vw;
+  margin-bottom:0;
+}
+html, body {
+	padding:0;
+	margin:0;
 }
   </style>
 </html>

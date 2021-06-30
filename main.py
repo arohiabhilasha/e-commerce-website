@@ -7,6 +7,14 @@ app = Flask("ECom App Fuddu Edition", template_folder="G:\\e-commerce_website\\"
 def home():
     return render_template("main.html")
 
+@app.route('/cart')
+def cart():
+    return render_template("cart.html")
+
+@app.route('/prod')
+def prods():
+    return render_template("products.html")
+
 @app.route('/product')
 def prod():
     prods = [

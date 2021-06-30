@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from random import randint
 
-app = Flask("ECom App Fuddu Edition", template_folder="G:\\E-commerce web project\\",static_folder="/",static_url_path="/")
+app = Flask("ECom App Fuddu Edition", template_folder="G:\\e-commerce_website\\",static_folder="/",static_url_path="/")
 
 @app.route('/')
 def home():

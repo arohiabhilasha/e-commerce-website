@@ -5,9 +5,6 @@
     padding: 20rem;
 }
 
-html{
-    background-color: #d62828;
-}
 /*-------------Button--------------*/
 .myButton {
     background:linear-gradient(to bottom, #f54040 5%, #d62828 100%);

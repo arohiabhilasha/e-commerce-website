@@ -1,18 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+
+
+.pro-des{
+    margin: 5rem !important;
+    padding: 20rem;
 }
 
-
-.row-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    background-color: white;
+html{
+    background-color: #d62828;
 }
-
 /*-------------Button--------------*/
 .myButton {
     background:linear-gradient(to bottom, #f54040 5%, #d62828 100%);
@@ -39,3 +34,7 @@
     position:relative;
     top:1px;
     }
+
+.row{
+    margin: 5rem;
+}

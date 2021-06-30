@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/static/product.css">
+    <link rel="stylesheet" href="/static/pro_des.css">
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
@@ -69,20 +70,24 @@
   <body>
     <br><br>
     <!--------------------Body------------------->
-    <div>
-        <div>
-            <img src="/UNIPOWER 5KVA CU-1140x380.jpg">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-2">
+          <img src="/UNIPOWER 5KVA CU-1140x380.jpg" width="100%">
         </div>
-        <hr>
-        <div>
-            <h>{{subhead}}</h>
-            <h1>{{prod_name}}</h1>
-            <p>{{briefdes}}</p>
-
-            <div>
-                <p>{{description}}</p>
-            </div>
+      
+        <div class="col-2">
+          <p>Home / Stabilizer</p>
+          <h1>{{prod_name}}</h1>
+          <p>{{briefdes}}</p>
+          <h4>$100</h4>
+          <div>
+              <p>{{description}}</p>
+          </div>
+          <input type="number" value="1">
+          <a href="" class="myButton">Add to cart</a>
         </div>
+      </div>
     </div>
     
     <script src="/website-menu-01/js/jquery-3.3.1.min.js"></script>

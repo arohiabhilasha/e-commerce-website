@@ -5,3 +5,37 @@
     
 }
 
+
+.row-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: white;
+}
+
+/*-------------Button--------------*/
+.myButton {
+    background:linear-gradient(to bottom, #f54040 5%, #d62828 100%);
+    background-color:#f54040 !important; 
+    border-radius:28px;
+    border:1px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#fafafa;
+    font-family:Arial;
+    font-size:11px;
+    padding:8px 16px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    
+    }
+    .myButton:hover {
+    background:linear-gradient(to bottom, #d62828 5%, #f54040 100%);
+    background-color:#d62828;
+    color: white;
+    text-decoration: none ;
+    }
+    .myButton:active {
+    position:relative;
+    top:1px;
+    }

@@ -25,5 +25,10 @@ def prod():
     prod = prods[randint(0,2)]
     return render_template("single_pro.html", prod_name=prod['prod_name'], subhead=prod['subhead'], briefdes=prod['briefdes'], description=prod['description'])
 
-
+@app.route('/html/<name>')
+def catchall(name):
+    try:
+        return render_template(f"{name}.html")
+    except:
+        return '404 Not Found'
 app.run('0.0.0.0',5000, debug=True)

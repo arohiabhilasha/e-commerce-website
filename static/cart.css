@@ -1,29 +1,8 @@
-@charset "utf-8";
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
-
-html,
-html a {
-  -webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-}
-
-body {
-  background-color: #fff;
-  color: #666;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 62.5%;
-  margin: 0 auto;
-}
 
 a {
   border: 0 none;
   outline: 0;
   text-decoration: none;
-}
-
-strong {
-  font-weight: bold;
 }
 
 p {
@@ -78,8 +57,7 @@ button,
 .price:before,
 .subtotal:before,
 .subtotal-value:before,
-.total-value:before,
-.promo-value:before {
+.total-value:before,{
   content: '£';
 }
 
@@ -254,14 +232,6 @@ aside {
   float: left;
   width: 50%;
 }
-
-.summary-promo {
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
 
 .subtotal-value,
 .total-value {

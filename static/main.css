@@ -26,6 +26,12 @@
   filter: drop-shadow(4px 5px 6px #222);
 }
 
-footer{
-  position: inherit;
+.footer:before,
+.footer:after {
+    content:"";
+    display:table;
+    line-height:0;
+}
+.footer:after {
+    clear:both;
 }

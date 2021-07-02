@@ -38,26 +38,26 @@ footer {
   padding-bottom: 0 !important;
 }
 
-.sectiion-m h{
-  text-align: center !important;
-  font-weight: bolder !important;
+.section-m{
+  align-content: center;
+}
+.section-m h{
+  text-align: center;
   font-size: large;
+  font-weight: bold;
 }
 
 .featured{
   display: grid;
   border: 2px black;
-  
+  grid-template-rows: auto auto;
 }
 
 .product-f{
-  flex-basis: 30%;
-  padding: 10px;
-  min-width: 200px;
-  margin: 15px;
-  text-align: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 200px 200px;
   box-shadow: 0 0px 7px 0px #ddd;
+  margin: 1rem;
 }
 .product-f p{
   font-size: 14px;
@@ -66,3 +66,4 @@ footer {
 .product-f img{
     width: 100%;
 }
+

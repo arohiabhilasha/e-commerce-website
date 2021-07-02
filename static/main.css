@@ -25,13 +25,15 @@
 .main_img{
   filter: drop-shadow(4px 5px 6px #222);
 }
-
+html,body {height:100% !important;}
+body {margin:0 !important;}
+.containerx {
+    display:table !important;
+    width:100% !important;
+    height:100% !important;
+}
+header,main,footer {display:table-row !important;}
+header,footer {height:1px !important;}
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
+  padding-bottom: 0 !important;
 }

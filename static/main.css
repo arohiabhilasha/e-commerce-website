@@ -38,6 +38,31 @@ footer {
   padding-bottom: 0 !important;
 }
 
-.pro-sec img{
-  max-width: 50% !important;
+.sectiion-m h{
+  text-align: center !important;
+  font-weight: bolder !important;
+  font-size: large;
+}
+
+.featured{
+  display: grid;
+  border: 2px black;
+  
+}
+
+.product-f{
+  flex-basis: 30%;
+  padding: 10px;
+  min-width: 200px;
+  margin: 15px;
+  text-align: center;
+  flex-direction: row;
+  box-shadow: 0 0px 7px 0px #ddd;
+}
+.product-f p{
+  font-size: 14px;
+  color: rgb(58, 57, 57);
+}
+.product-f img{
+    width: 100%;
 }

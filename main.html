@@ -106,9 +106,9 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </span> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
       </div>
-      <h>FEATURED PRODUCTS</h>
       <div class="featured">
-        <div class="product-f">
+        <h>FEATURED PRODUCTS</h><br><br>
+        <div class="product">
           <div class="pro-sec">
             <img src="/UNXT3090-1140x380.jpg">
             <hr class="solid">
@@ -121,7 +121,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
-        <div class="product-f">
+        <div class="product">
           <div class="pro-sec">
             <img src="/UNXT3090-1140x380.jpg">
             <hr class="solid">
@@ -267,24 +267,40 @@
       padding: 5rem;
 
     }
-    .section-m h{
-      align-content: center;
-      font-size: large;
-      font-weight: bold;
-    }
-    .about-us{
+    .about-us, .section-m{
       text-align: center;
       padding: 2rem;
+
     }
-    .about-us h{
+    .about-us h, .section-m h{
       font-size: x-large;
-      color: rgb(63, 62, 62);
+      color: rgb(126, 125, 125);
+      font-weight: 500;
     }
     .about-us span{
       font-size: medium;
       line-height: 1.8;
       padding: 2rem;
-      text-align: left;
     }
+    .featured{
+      display: grid;
+      grid-template-rows: auto auto;
+      margin: 3rem;
+      padding: 3rem;
+    }
+    .product{
+      display: grid;
+      grid-template-columns: 200px 200px;
+      box-shadow: 0 0px 7px 0px #ddd;
+      margin: 1rem;
+    }
+    .product p{
+      font-size: 14px;
+      color: rgb(58, 57, 57);
+    }
+    .product img{
+        width: 100%;
+    }
+
   </style>
 </html>

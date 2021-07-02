@@ -38,32 +38,4 @@ footer {
   padding-bottom: 0 !important;
 }
 
-.section-m{
-  align-content: center;
-}
-.section-m h{
-  text-align: center;
-  font-size: large;
-  font-weight: bold;
-}
-
-.featured{
-  display: grid;
-  border: 2px black;
-  grid-template-rows: auto auto;
-}
-
-.product-f{
-  display: grid;
-  grid-template-columns: 200px 200px;
-  box-shadow: 0 0px 7px 0px #ddd;
-  margin: 1rem;
-}
-.product-f p{
-  font-size: 14px;
-  color: rgb(58, 57, 57);
-}
-.product-f img{
-    width: 100%;
-}
 

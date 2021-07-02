@@ -37,3 +37,7 @@ header,footer {height:1px !important;}
 footer {
   padding-bottom: 0 !important;
 }
+
+.pro-sec img{
+  max-width: 50% !important;
+}

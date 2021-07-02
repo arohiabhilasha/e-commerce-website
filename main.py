@@ -31,4 +31,7 @@ def catchall(name):
         return render_template(f"{name}.html")
     except:
         return '404 Not Found'
+@app.route('/addtocart',methods=['GET'])
+def addtocart():
+    pass
 app.run('0.0.0.0',5000, debug=True)

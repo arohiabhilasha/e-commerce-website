@@ -144,7 +144,7 @@ color:#f54040;
 margin-right: 15rem;
 }
 
-.sort{
+/*.sort{
 margin-left: 25rem;
 margin-right: 2rem;
 } 
@@ -162,4 +162,7 @@ float:right;
 .text-center{
 text-align: center !important;
 }
-
+*/
+.sort-g{
+  float: inherit;
+}

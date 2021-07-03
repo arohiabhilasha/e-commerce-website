@@ -13,3 +13,12 @@ class Category(object):
         self.products = products
     def json(self):
         return {"name":self.name,"products":self.products}
+class User(object):
+    def __init__(self,email,password,id=0):
+        self.email = email
+        self.password = password
+        self.hash = self.__hash__()
+    def json(self):
+        return {"email":self.email,"password":self.password}
+    def __hash__(self):
+        return hash((self.email, self.password))

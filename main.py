@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, make_response
 from random import randint
 from classes import Product
 import pickledb as dbms
@@ -29,7 +29,27 @@ def prod():
     prod = prods[randint(0,2)]
     return render_template("single_pro.html", prod_name=prod['prod_name'], subhead=prod['subhead'], briefdes=prod['briefdes'], description=prod['description'])
 
+@app.route('/processLogin',methods=['GET','POST'])
+def processLogin():
+    resp = make_response(redirect('/acc'))
+    resp.set_cookie('isLoggedIn', "true")
+    resp.set_cookie('secretCookie',"true")
+    return resp
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+@app.route('/signup')
+def signup():
+    return render_template("signup.html")
+
+@app.route('/acc')
+def account():
+    if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
+        return render_template('acc.html')
+    else:
+        return redirect('/login')
 
 @app.route('/html/<name>')
 def catchall(name):

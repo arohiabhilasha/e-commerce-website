@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/static/main.css">
+    <script src="/static/main.js"></script>
     
     <!-- Style --<link rel="stylesheet" href="/static/product.css">-->
     
@@ -73,8 +74,8 @@
                 </li>
                 
                 
-                <li><a href="#blog-section" class="nav-link">Contact</a></li>
-                <li><a href="#contact-section" class="nav-link">Account</a></li>
+                <li><a href="#contact_section" class="nav-link">Contact</a></li>
+                <li><a href="" class="nav-link">Account</a></li>
                 <li class="social"><a href="#" class="nav-link"><img src="outline_shopping_cart_black_24dp.png"></a></li>
                 <li class="social"><a href="#" class="nav-link"></a></li>
               </ul>
@@ -100,7 +101,7 @@
 
     <div class="section-m">
       <div class="about-us">
-        <h>ABOUT US</h><br><br>
+        <h class="effect-underline">ABOUT US</h><br><br>
         <span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </span> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
@@ -127,7 +128,7 @@
     </div>
 
     <!------Contact us--------------->
-    <div class="container">
+    <div class="container" id="#contact_section">
       <h>CONATCT US</h><br><br>
       <div class="row sec-2" >                <div id="content" class="col-sm-12">      
           <h3>Our Location</h3>
@@ -376,5 +377,34 @@
     legend{
       font-weight: bold;
     }
+    
+    /*effect-underline*/
+    a.effect-underline:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 1em;
+      width: 100%;
+      border-bottom: 1px solid;
+      margin-top: 10px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale(0,1);
+      transform: scale(0,1);
+    }
+
+    a.effect-underline:hover:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .col-1 p{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(87, 85, 85, 0.884);
+  }
+
   </style>
 </html>

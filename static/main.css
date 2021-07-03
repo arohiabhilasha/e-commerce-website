@@ -11,6 +11,9 @@
   min-width: 300px;
   margin-top: 10rem;
 }
+.col-1 p{
+  font-size: medium;
+}
 
 .col-1 img{
   max-width: 150%;

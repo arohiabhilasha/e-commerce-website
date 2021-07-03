@@ -76,7 +76,8 @@ def signup():
 @app.route('/acc')
 def account():
     if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
-        return render_template('acc.html')
+        with open('main.html','r') as f:
+            return render_template('acc.html',sts=f.read())
     else:
         return redirect('/login')
 

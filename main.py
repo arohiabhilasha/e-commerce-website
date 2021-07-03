@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request
 from random import randint
+from classes import Product
+import pickledb as dbms
+
+proddb = dbms.load("products.json",True)
 
 app = Flask("ECom App Fuddu Edition", template_folder="G:\\e-commerce_website\\",static_folder="/",static_url_path="/")
 
@@ -25,12 +29,15 @@ def prod():
     prod = prods[randint(0,2)]
     return render_template("single_pro.html", prod_name=prod['prod_name'], subhead=prod['subhead'], briefdes=prod['briefdes'], description=prod['description'])
 
+
+
 @app.route('/html/<name>')
 def catchall(name):
     try:
         return render_template(f"{name}.html")
     except:
         return '404 Not Found'
+
 @app.route('/addtocart',methods=['GET'])
 def addtocart():
     pass

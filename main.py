@@ -6,6 +6,11 @@ import pickledb as dbms
 proddb = dbms.load("products.json",True)
 userdb = dbms.load('users.json', True)
 
+try:
+    userdb.dgetall('user')
+except KeyError:
+    userdb.dcreate('user')
+
 app = Flask("ECom App Fuddu Edition", template_folder="G:\\e-commerce_website\\",static_folder="/",static_url_path="/")
 
 @app.route('/')
@@ -35,13 +40,14 @@ def processLogin():
     email = request.form.get('email')
     password = request.form.get('password')
     tempUser = User(email,password)
-    if not userdb.get(hash(tempUser)):
-        return 'Email/Password Wrong'
-    else:
+    try:
+        userdb.dget('user',str(hash(tempUser)))
         pass
+    except KeyError:
+        return 'Email/Password Wrong!'
     resp = make_response(redirect('/acc'))
     resp.set_cookie('isLoggedIn', "true")
-    resp.set_cookie('secretCookie',hash(tempUser))
+    resp.set_cookie('secretCookie',str(hash(tempUser)))
     return resp
 
 @app.route('/processSignUp', methods=['GET','POST'])
@@ -49,10 +55,12 @@ def signuproc():
     email = request.form.get('email')
     password = request.form.get('password')
     tempUser = User(email,password)
-    if not userdb.get(hash(tempUser)):
-        userdb.set(hash(tempUser),str(tempUser.json()))
-    else:
+    try:
+        userdb.dget('user',str(hash(tempUser)))
         return 'User Already Exists'
+    except KeyError:
+        userdb.dadd("user",(str(hash(tempUser)),tempUser.json()))
+        return redirect('/login')
 
 
 @app.route('/login')

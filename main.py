@@ -40,7 +40,7 @@ def processLogin():
     email = request.form.get('email')
     password = request.form.get('password')
     user = request.form.get('name')
-    tempUser = User(user,email,password)
+    tempUser = User(email,password,user,0)
     try:
         userdb.dget('user',str(hash(tempUser)))
         pass
@@ -55,7 +55,8 @@ def processLogin():
 def signuproc():
     email = request.form.get('email')
     password = request.form.get('password')
-    tempUser = User(email,password)
+    user = request.form.get('name')
+    tempUser = User(email,password,user,0)
     try:
         userdb.dget('user',str(hash(tempUser)))
         return 'User Already Exists'
@@ -78,7 +79,7 @@ def signup():
 def account():
     if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
         with open('main.html','r') as f:
-            return render_template('acc.html',sts=f.read(),name=dict(userdb.get(str(request.cookies.get('secretCookie'))))['name'])
+            return render_template('acc.html',sts=f.read(),name=dict(userdb.dget('user',str(request.cookies.get('secretCookie'))))['name'])
     else:
         return redirect('/login')
 

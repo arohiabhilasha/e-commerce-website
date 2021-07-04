@@ -11,7 +11,7 @@ try:
 except KeyError:
     userdb.dcreate('user')
 
-app = Flask("ECom App Fuddu Edition", template_folder="G:\\e-commerce_website\\",static_folder="/",static_url_path="/")
+app = Flask("ECom App Fuddu Edition", template_folder=".",static_folder="/",static_url_path="/")
 
 @app.route('/')
 def home():
@@ -39,7 +39,8 @@ def prod():
 def processLogin():
     email = request.form.get('email')
     password = request.form.get('password')
-    tempUser = User(email,password)
+    user = request.form.get('name')
+    tempUser = User(user,email,password)
     try:
         userdb.dget('user',str(hash(tempUser)))
         pass
@@ -77,7 +78,7 @@ def signup():
 def account():
     if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
         with open('main.html','r') as f:
-            return render_template('acc.html',sts=f.read())
+            return render_template('acc.html',sts=f.read(),name=dict(userdb.get(str(request.cookies.get('secretCookie'))))['name'])
     else:
         return redirect('/login')
 

@@ -16,8 +16,6 @@ import copy
 import sys
 import os
 
-import wand.image
-
 
 proddb = dbms.load("products.json",True)
 userdb = dbms.load('users.json', True)
@@ -61,7 +59,7 @@ def processLogin():
         userdb.dget('user',str(hash(tempUser)))
         pass
     except KeyError:
-        return 'Email/Password Wrong!'
+        return redirect('/login?alerts')
     resp = make_response(redirect('/acc'))
     resp.set_cookie('isLoggedIn', "true")
     resp.set_cookie('secretCookie',str(hash(tempUser)))
@@ -81,8 +79,10 @@ def signuproc():
         return redirect('/login')
 
 
-@app.route('/login')
+@app.route('/login',methods=['GET'])
 def login():
+    if request.args.get('alerts'):
+        return render_template("login.html",alertx='Email/Password Wrong!')
     if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
         return redirect('/acc')
     return render_template("login.html")

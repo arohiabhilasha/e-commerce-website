@@ -67,7 +67,20 @@
                 
                 
                 <li><a href="#contact_section" class="nav-link">Contact</a></li>
-                <li><a href="" class="nav-link">Account</a></li>
+                <!--li><a href="" class="nav-link">Account</a></li-->
+                <li class="has-children">
+                  <a href="localhost:5000/prod" class="nav-link">Account</a>
+                  <ul class="dropdown">
+                    {% if signedin %}
+                    <li><a href="" class="nav-link">My Cart</a></li>
+                    <li><a href="" class="nav-link">Settings</a></li>
+                    <li><a href="/logout" class="nav-link">Logout</a></li>
+                    {% else %}
+                    <li><a href="/login" class="nav-link">Login</a></li>
+                    <li><a href="/signup" class="nav-link">Sign Up</a></li>
+                    {% endif %}
+                  </ul>
+                </li>
                 <li class="social"><a href="#" class="nav-link"><img src="outline_shopping_cart_black_24dp.png"></a></li>
                 <li class="social"><a href="#" class="nav-link"></a></li>
               </ul>

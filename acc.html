@@ -1,1 +1,415 @@
-YOU HAVE BEEN LOGGED IN!
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/main.css">
+    <script src="/static/main.js"></script>
+    
+    <!-- Style --<link rel="stylesheet" href="/static/product.css">-->
+    
+    <link rel="stylesheet" href="/website-menu-01/css/style.css">
+    <link href="https://store.myunipower.com/catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"-->
+    <link href="https://store.myunipower.com/catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+    <link href="https://store.myunipower.com/catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+    <link href="https://store.myunipower.com/catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="https://store.myunipower.com/image/catalog/cart.png" rel="icon"/>
+    <script src="https://store.myunipower.com/catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="website-menu-01/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="website-menu-01/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="website-menu-01/css/bootstrap.min.css">
+
+    <title>Home . Unipower</title>
+  </head>
+
+  <body><div class="containerx">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"><img src="outline_menu_black_24dp.png"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html">
+                <div class="logo">
+                    <img src="logo (1).png" width ="125px">
+                </div><span class="text-primary"></span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li class="has-children">
+                  <a href="localhost:5000/prod" class="nav-link">Products</a>
+                  <ul class="dropdown">
+                    <li><a href="https://localhost:5000/prod" class="nav-link">Stabilizers</a></li>
+                    <li><a href="localhost:5000/prod  " class="nav-link">Servos</a></li>
+                  </ul>
+                </li>
+                
+                
+                <li><a href="#contact_section" class="nav-link">Contact</a></li>
+                <!--li><a href="" class="nav-link">Account</a></li-->
+                <li class="has-children">
+                  <a href="localhost:5000/prod" class="nav-link">Account</a>
+                  <ul class="dropdown">
+                    {% if signedin %}
+                    <li><a href="" class="nav-link">My Cart</a></li>
+                    <li><a href="" class="nav-link">Settings</a></li>
+                    <li><a href="/logout" class="nav-link">Logout</a></li>
+                    {% else %}
+                    <li><a href="/login" class="nav-link">Login</a></li>
+                    <li><a href="/signup" class="nav-link">Sign Up</a></li>
+                    {% endif %}
+                  </ul>
+                </li>
+                <li class="social"><a href="#" class="nav-link"><img src="outline_shopping_cart_black_24dp.png"></a></li>
+                <li class="social"><a href="#" class="nav-link"></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+        <div class="row-1">
+            <div class="col-1">
+                <h1>You are in safe hands!</h1>
+                <p>Our best in class stabilizers will ensure that your appliances stay protected<br> and that nothing comes in between you and your happy moments</p>
+                <a href="#" class="myButton">Explore &#x2192;</a>
+            </div>
+            <div class="col-1">
+                <img src="1 (1).png" class="main_img">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-m">
+      <div class="about-us">
+        <h class="effect-underline">ABOUT US</h><br><br>
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </span> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
+      <div class="featured">
+        <h>FEATURED PRODUCTS</h><br><br>
+        <div class="product">
+          <div class="pro-sec">
+            <img src="/UNXT3090-1140x380.jpg" width="100%">
+          </div>
+          <div class="pro-des">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="pro-sec">
+            <img src="/UNXT3090-1140x380.jpg" width="100%">
+          </div>
+          <div class="pro-des">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------Contact us--------------->
+    <div class="container" id="#contact_section">
+      <h>CONATCT US</h><br><br>
+      <div class="row sec-2" >                <div id="content" class="col-sm-12">      
+          <h3>Our Location</h3>
+          <div class="panel panel-default">
+            <div class="panel-body location">
+              <div class="row">
+                            <div class="col-sm-3"><img src="https://store.myunipower.com/image/cache/catalog/LOGO-268x50.jpg" alt="Unipower Energy Systems Pvt. Ltd." title="Unipower Energy Systems Pvt. Ltd." class="img-thumbnail" /></div>
+                            <div class="col-sm-3"><strong>Unipower Energy Systems Pvt. Ltd.</strong><br />
+                  <address>
+                  Corporate Office: 336, Udyog Vihar, Phase-4, Sector-19, Gurgaon-122016 (Haryana)              </address>
+                              </div>
+                <div class="col-sm-3"><strong>Telephone</strong><br>
+                  8956158588<br />
+                  <br />
+                              </div>
+                <div class="col-sm-3">
+                                            </div>
+              </div>
+            </div>
+          </div>
+                <form action="https://store.myunipower.com/index.php?route=information/contact" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <fieldset>
+              <legend>Contact Form</legend>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-name">Your Name</label>
+                <div class="col-sm-10">
+                  <input type="text" name="name" value="" id="input-name" class="form-control" />
+                              </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-email">E-Mail Address</label>
+                <div class="col-sm-10">
+                  <input type="text" name="email" value="" id="input-email" class="form-control" />
+                              </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-enquiry">Enquiry</label>
+                <div class="col-sm-10">
+                  <textarea name="enquiry" rows="10" id="input-enquiry" class="form-control"></textarea>
+                              </div>
+              </div>
+                      </fieldset>
+            <div class="buttons">
+              <div class="pull-right">
+                <input class="myButton" type="submit" value="Submit" />
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+    </div>
+    
+    <script src="/website-menu-01/js/jquery-3.3.1.min.js"></script>
+    <script src="/website-menu-01/js/popper.min.js"></script>
+    <script src="/website-menu-01/js/bootstrap.min.js"></script>
+    <script src="/website-menu-01/js/jquery.sticky.js"></script>
+    <script src="/website-menu-01/js/main.js"></script>
+  
+  
+  <footer class="page-footer font-small indigo">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Information</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">About Us</a>
+            </li>
+            <li>
+              <a href="#!">Delivery Information</a>
+            </li>
+            <li>
+              <a href="#!">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#!">Terms & Conditions</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Customer Service</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Contact Us</a>
+            </li>
+            <li>
+              <a href="#!">Returns</a>
+            </li>
+            <li>
+              <a href="#!">Site Map</a>
+            </li>
+            
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Extras</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Brands</a>
+            </li>
+            <li>
+              <a href="#!">Gift Certificates</a>
+            </li>
+            <li>
+              <a href="#!">Affiliates</a>
+            </li>
+            <li>
+              <a href="#!">Specials</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">My Account</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">My Account</a>
+            </li>
+            <li>
+              <a href="#!">Order History</a>
+            </li>
+            <li>
+              <a href="#!">Wish List
+              </a>
+            </li>
+            <li>
+              <a href="#!">Newsletter</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Unipower Energy Systems Pvt. Ltd. © 2021</div>
+    <!-- Copyright -->
+  </footer></div></body>
+  <style>
+    .section-m{
+      justify-content: space-around;
+      margin: 5rem;
+      padding: 10rem;
+
+    }
+    .about-us, .section-m{
+      text-align: center;
+      padding: 2rem;
+
+    }
+    .about-us h, .section-m h, .container h{
+      font-size: x-large;
+      color: rgb(126, 125, 125);
+      font-weight: 500;
+    }
+    .about-us span{
+      font-size: medium;
+      line-height: 1.8;
+      padding: 2rem;
+    }
+    .featured{
+      display: grid;
+      grid-template-rows: auto auto;
+      margin: 3rem;
+      padding: 3rem;
+    }
+    .product{
+      display: flex;
+      float: inline-end;
+      box-shadow: 0 0px 7px 0px #ddd;
+      margin: 1rem;
+      padding: 5rem;
+    }
+    .product p{
+      font-size: 14px;
+      color: rgb(58, 57, 57);
+      text-align: justify;
+    }
+    .product img{
+        width: 100%;
+    }
+    
+    .myButton {
+      background-color:#f54040;
+      border-radius:3px;
+      border:1px solid #ffffff;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:12px;
+      padding:8px 32px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #ffffff;
+    }
+    .myButton:hover {
+      background-color:#d42d2d;
+      color: white;
+    }
+    .myButton:active {
+      position:relative;
+      top:1px;
+    }       
+    .container{
+      text-align: center;
+    }
+    .sec-2, .location{
+      padding: 5rem;
+    }
+    legend{
+      font-weight: bold;
+    }
+    
+    /*effect-underline*/
+    a.effect-underline:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 1em;
+      width: 100%;
+      border-bottom: 1px solid;
+      margin-top: 10px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale(0,1);
+      transform: scale(0,1);
+    }
+
+    a.effect-underline:hover:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .col-1 p{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(87, 85, 85, 0.884);
+  }
+
+  </style>
+</html>

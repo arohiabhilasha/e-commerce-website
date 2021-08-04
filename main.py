@@ -2,6 +2,20 @@ from flask import Flask, render_template, request, redirect, make_response
 from random import randint
 from classes import Product, User
 import pickledb as dbms
+from flask import Flask, request, send_from_directory, jsonify
+import base64
+import datetime
+from os.path import isfile, join
+from mimetypes import MimeTypes
+from os import listdir
+import hashlib
+import json
+import time
+import hmac
+import copy
+import sys
+import os
+
 
 proddb = dbms.load("products.json",True)
 userdb = dbms.load('users.json', True)
@@ -11,11 +25,20 @@ try:
 except KeyError:
     userdb.dcreate('user')
 
-app = Flask("ECom App Fuddu Edition", template_folder="G:\\e-commerce_website\\",static_folder="/",static_url_path="/")
+app = Flask("ECom App Fuddu Edition", template_folder=".",static_folder="/",static_url_path="/")
 
 @app.route('/')
 def home():
+    if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
+        return render_template("main.html", signedin=True)
     return render_template("main.html")
+
+@app.route('/logout')
+def logout():
+  resp = make_response(redirect('/login'))
+  resp.delete_cookie('isLoggedIn')
+  resp.delete_cookie('secretCookie')
+  return resp
 
 @app.route('/cart')
 def cart():
@@ -39,12 +62,15 @@ def prod():
 def processLogin():
     email = request.form.get('email')
     password = request.form.get('password')
-    tempUser = User(email,password)
+    user = request.form.get('name')
+    tempUser = User(email,password,user,0)
     try:
-        userdb.dget('user',str(hash(tempUser)))
+        print(repr(tempUser))
+        print(tempUser.__hash__())
+        userdb.dget('user',str(tempUser.__hash__()))
         pass
     except KeyError:
-        return 'Email/Password Wrong!'
+        return redirect('/login?alerts=invalid')
     resp = make_response(redirect('/acc'))
     resp.set_cookie('isLoggedIn', "true")
     resp.set_cookie('secretCookie',str(hash(tempUser)))
@@ -54,33 +80,39 @@ def processLogin():
 def signuproc():
     email = request.form.get('email')
     password = request.form.get('password')
-    tempUser = User(email,password)
+    user = request.form.get('name')
+    tempUser = User(email,password,user,0)
     try:
+        
         userdb.dget('user',str(hash(tempUser)))
-        return 'User Already Exists'
+        return redirect('/signup?alerts=invalid')
     except KeyError:
+        print(repr(tempUser))
         userdb.dadd("user",(str(hash(tempUser)),tempUser.json()))
         return redirect('/login')
 
 
-@app.route('/login')
+@app.route('/login',methods=['GET'])
 def login():
+    if request.args.get('alerts'):
+        return render_template("login.html",alertx='Email/Password Wrong!')
     if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
         return redirect('/acc')
     return render_template("login.html")
 
 @app.route('/signup')
 def signup():
+    if request.args.get('alerts'):
+        return render_template("signup.html",alertx='Email already registered!')
     return render_template("signup.html")
 
 @app.route('/acc')
 def account():
     if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
-        return render_template('acc.html')
+        with open('main.html','r') as f:
+            return render_template('acc.html',sts=f.read(),name=dict(userdb.dget('user',str(request.cookies.get('secretCookie'))))['name'])
     else:
         return redirect('/login')
-
-@app.route('/acc')
 
 @app.route('/html/<name>')
 def catchall(name):

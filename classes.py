@@ -39,8 +39,11 @@ class User(object):
         Returns the json-serializable dict of the object.
         '''
         return {"name":self.name,"dob":self.dob,"email":self.email,"password":self.password}
+<<<<<<< HEAD
     def __repr__(self):
         return f'User({self.email}, {self.password})'
+=======
+>>>>>>> origin/main
     def __hash__(self):
         return hash((self.email, self.password))
 

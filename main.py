@@ -57,6 +57,15 @@ def prod():
     ]
     prod = prods[randint(0,2)]
     return render_template("single_pro.html", prod_name=prod['prod_name'], subhead=prod['subhead'], briefdes=prod['briefdes'], description=prod['description'])
+@app.route('/productxss',methods=['GET'])
+def prweods():
+    prods = [
+        {'prod_name':'BroBook','subhead':'Barney Stinson','briefdes':'This is the legendary playbook','description':'This is the great book everyone wants!'},
+        {'prod_name':'BroBook 2','subhead':'Barney Stinson','briefdes':'This is the legendary playbook','description':'This is the great book everyone wants!'},
+        {'prod_name':'BroBook 3','subhead':'Barney Stinson','briefdes':'This is the legendary playbook','description':'This is the great book everyone wants!'}
+    ]
+    prod = prods[randint(0,2)]
+    return render_template("single_pro.html", prod_name=request.args.get("prod"), subhead=prod['subhead'], briefdes=prod['briefdes'], description=prod['description'])
 
 @app.route('/processLogin',methods=['GET','POST'])
 def processLogin():
@@ -70,7 +79,11 @@ def processLogin():
         userdb.dget('user',str(tempUser.__hash__()))
         pass
     except KeyError:
+<<<<<<< HEAD
         return redirect('/login?alerts=invalid')
+=======
+        return redirect('/login?alerts')
+>>>>>>> origin/main
     resp = make_response(redirect('/acc'))
     resp.set_cookie('isLoggedIn', "true")
     resp.set_cookie('secretCookie',str(hash(tempUser)))

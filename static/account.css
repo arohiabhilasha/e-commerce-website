@@ -14,13 +14,8 @@ body {
 }
 
 #login-box {
-<<<<<<< HEAD
   position: relative;
   margin: 5% 30%;
-=======
-  position: center;
-  margin: 5% auto;
->>>>>>> origin/main
   width: 600px;
   height: 400px;
   background: #FFF;

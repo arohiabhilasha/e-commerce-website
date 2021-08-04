@@ -79,11 +79,8 @@ def processLogin():
         userdb.dget('user',str(tempUser.__hash__()))
         pass
     except KeyError:
-<<<<<<< HEAD
         return redirect('/login?alerts=invalid')
-=======
         return redirect('/login?alerts')
->>>>>>> origin/main
     resp = make_response(redirect('/acc'))
     resp.set_cookie('isLoggedIn', "true")
     resp.set_cookie('secretCookie',str(hash(tempUser)))

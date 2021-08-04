@@ -85,7 +85,30 @@ def processLogin():
     resp.set_cookie('isLoggedIn', "true")
     resp.set_cookie('secretCookie',str(hash(tempUser)))
     return resp
-
+@app.route('/orders')
+def accorders():
+    o=[{'amount':'$5000','id':'h32uh423','link':'hhdakjh'}]
+    if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
+        return render_template("manageorders.html", signedin=True,orders=o)
+    return render_template("manageorders.html",orders=o)
+o=[{'amount':'$5000','id':'h32uh423','link':'hhdakjh'}]
+def searchorder(id):
+    for x in o:
+        if x['id'] == id:
+            return x
+    return None
+@app.route('/order/<id>')
+def vieworder(id):
+    order = searchorder(id)
+    if request.cookies.get('isLoggedIn') and request.cookies.get('secretCookie'):
+        if order:
+            return render_template("singleorder.html", signedin=True,order=order)
+        else:
+            return render_template("singleorder.html", signedin=True)
+    if order:
+        return render_template("singleorder.html", signedin=True,order=order)
+    else:
+        return render_template("singleorder.html", signedin=True)
 @app.route('/processSignUp', methods=['GET','POST'])
 def signuproc():
     email = request.form.get('email')
